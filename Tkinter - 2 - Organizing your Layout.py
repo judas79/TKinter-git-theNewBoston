@@ -3,25 +3,25 @@
 
 from tkinter import *
 
-root = Tk()         # creates a blank window named root
+root = Tk()                     # creates a blank window named root
 
 top_frame = Frame(root)
 top_frame.pack()
 bottom_frame = Frame(root)
-bottom_frame.pack(side=BOTTOM) # since the bottom frame is specified to be, at the bottom the top is at the top
+bottom_frame.pack(side=BOTTOM)  # since the bottom frame is specified to be, at the bottom the top is at the top
 
-button1 = Button(top_frame, text='button 1', highlightbackground ='red',fg='yellow') # creating a widget button instead of text
-button2 = Button(top_frame, text='button 2',bg='blue',fg='green') # button placement top_frame is the first parameter, what the text displays, the second, and color, fg=, the third
-button3 = Button(top_frame, text='button 3', fg ='red') # fg foreground bg background
-#button4 = Button(bottom_frame, text='button 4', highlightcolor='purple') # at the bottom frame
-button4 = Button(bottom_frame, text="Press!",highlightbackground ='blue', fg="green") # still the fg color option does not work
+button1 = Button(top_frame, text='button 1', highlightbackground='red', fg='yellow')  # creating a widget button instead of text
+button2 = Button(top_frame, text='button 2', bg='blue', fg='green')                   # button placement top_frame is the first parameter, what the text displays, the second, and color, fg=, the third
+button3 = Button(top_frame, text='button 3', fg='red')                                # fg foreground bg background
+# button4 = Button(bottom_frame, text='button 4', highlightcolor='purple')            # at the bottom frame
+button4 = Button(bottom_frame, text="Press!", highlightbackground='blue', fg="green") # still the fg color option does not work
 
-button1.pack(side=LEFT) # this tells the program what and where to display
+button1.pack(side=LEFT)    # this tells the program what and where to display
 button2.pack(side=LEFT)
-button3.pack(side=LEFT,fill=BOTH, expand=True )
-button4.pack(side=BOTTOM) # The parameters could be left blank since there are no other objects in the bottom frame
+button3.pack(side=LEFT, fill=BOTH, expand=True)
+button4.pack(side=BOTTOM)  # The parameters could be left blank since there are no other objects in the bottom frame
 
-root.mainloop()     # mainloop keeps the root looping infinitely or until closed, so the window remains visible on the screen.
+root.mainloop()            # mainloop keeps the root looping infinitely or until closed, so the window remains visible on the screen.
 
 '''bottomFrame = Frame(root).pack(side=BOTTOM) ?
 btn1 = Button(bottomFrame, text="okay", fg="red").pack()'''
