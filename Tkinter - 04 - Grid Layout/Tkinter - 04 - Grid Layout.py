@@ -6,7 +6,7 @@ root.title('Roddy')
 label1 = Label(root, text='Name', fg='blue')
 label2 = Label(root, text='Password', fg ="blue")
 
-entry1 = Entry(root,bg='white')    # Entry is used as a field to store input from a user, text or numbers or symbols, one for the Name, in this case
+entry1 = Entry(root, bg='white')   # Entry is used as a field to store input from a user, text or numbers or symbols, one for the Name, in this case
 entry2 = Entry(root, bg='gray')    # Entry is used as a field to store input from a user, text or numbers or symbols, one for the password, in this case
 
 label1.grid(row='0')               # grid makes an assigning point, for rows and for columns; default column = 0
