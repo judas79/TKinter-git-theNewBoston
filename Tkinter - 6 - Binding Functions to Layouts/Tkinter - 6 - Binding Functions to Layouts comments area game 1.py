@@ -35,17 +35,17 @@ button_1 = Button(root, text="Left click to print name", command=printName)
 button_1.pack()
 
 def printName2(event):
-    print ("Eureka ! You found it.")
+    print("Eureka ! You found it.")
 
 button_2 = Button(root, text="Use middle mouse click to find it." )
-button_2.bind("<Button-2>",printName2)
+button_2.bind("<Button-2>", printName2)
 button_2.pack()
 
 def printName3(event):
-    print ("Good Job!.Here is an icecream.")
+    print("Good Job!.Here is an icecream.")
 
 button_3 = Button(root, text="Use right click for a treat." )
-button_3.bind("<Button-3>",printName3)
+button_3.bind("<Button-3>", printName3)
 button_3.pack()
 
 root.mainloop()

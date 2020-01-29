@@ -31,17 +31,20 @@ from tkinter import *
 
 # enter text then display it within the root window.
 root = Tk()
-text = Label(root, text = "Name: ")
-text.grid(row = 0, column = 0, sticky = E)
+text = Label(root, text="Name: ")
+text.grid(row=0, column=0, sticky=E)
 entry = Entry(root)
-entry.grid(row = 0, column = 1)
+entry.grid(row=0, column=1)
 entry.focus_set()
+
 def print_name(event):
     name = entry.get()
-    label_1 = Label(root, text = "Hello " + name)
-    label_1.grid(row = 2, columnspan = 2)
+    label_1 = Label(root, text="Hello " + name)
+    label_1.grid(row=2, columnspan=2)
+    entry.delete(0, 'end')  # added after theNewBoston lesson to clear the entry (not part of the lesson)
+
 button_1 = Button(root, text = "Press Me", bg = "black", fg = "white")
 button_1.bind("<Button-1>", print_name)
-button_1.grid(row = 1, columnspan = 2)
+button_1.grid(row=1, columnspan=2)
 
 root.mainloop()
