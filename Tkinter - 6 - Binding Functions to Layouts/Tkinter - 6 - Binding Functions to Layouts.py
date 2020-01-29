@@ -29,16 +29,18 @@ def callback():
     print('Hey!')
 
 button2.invoke()                    # button2 starts in the on position
-button2.config(command = callback)
+button2.config(command=callback)
+
 #button2.state(['disabled'])# does not work unless using ttk.Button, sets state of button enabled or disabled
-button2.state(['!disabled'])# does not work unless using ttk.Button, reads if button state is enabled or disabled
+button2.state(['!disabled'])
+
 #button2.instate(['disabled'])#
 print(button2.instate(['!disabled']))
 
-logo = PhotoImage(file='/Users/rodman/PycharmProjects/tkinter/back_large.gif')
-button2.config(image = logo, compound= LEFT) #orients the picture to the left side of the button disply
-smallLogo = logo.subsample(5,5)              # resizes the logo and saves it as smallLogo
-button2.config(image = smallLogo)            # displays the button with the small logo
+logo = PhotoImage(file='C:\\Users\\Gina\\PycharmProjects\\TKinter-git-theNewBoston\\Tkinter - 6 - Binding Functions to Layouts\\back_large.gif')
+button2.config(image=logo, compound=LEFT) #orients the picture to the left side of the button disply
+smallLogo = logo.subsample(5, 5)              # resizes the logo and saves it as smallLogo
+button2.config(image=smallLogo)            # displays the button with the small logo
 
 
 root.mainloop()     # mainloop keeps the root looping infinitely or until closed, so the window remains visible on the screen.
