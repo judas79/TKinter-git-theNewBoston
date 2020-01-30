@@ -25,10 +25,10 @@ from PIL import Image, ImageTk
 
 root = Tk()
 
-im = Image.open("test1.jpeg")
-im.save("test1.png")
-photo = PhotoImage(file="test1.png")
-label1 = Label(root,image=photo)
+im = Image.open("back_large.gif")
+im.save("back_large.gif")
+photo = PhotoImage(file="back_large.gif")
+label1 = Label(root, image=photo)
 label1.pack()
 root.mainloop()
 
