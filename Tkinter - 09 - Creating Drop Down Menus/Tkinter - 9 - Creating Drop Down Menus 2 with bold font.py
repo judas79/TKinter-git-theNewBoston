@@ -19,10 +19,10 @@ root.config(menu=menu1)        # configures the menu object so tkinter recognize
 sub_menu = Menu(menu1, font="helvetica 18 bold")         # sub menu being a menu item uses the Menu class to build sub_menu and is within menu1, this makes a blank menu
 menu1.add_cascade(label='File', menu=sub_menu)   # to add drop down item functionalit to the empty menu window, add_cascade add dropdown item/ button, then parameters:
                                                  # a label, and what appears in it, which is the sub menu
-sub_menu.add_command(label= 'New Project...', command=do_nothing) # creates a item, New Project... in the sub menu that points to function do_nothing
-sub_menu.add_command(label= 'New', command=do_nothing)            # creates a item, New in the sub menu that points to function do_nothing
+sub_menu.add_command(label='New Project...', command=do_nothing) # creates a item, New Project... in the sub menu that points to function do_nothing
+sub_menu.add_command(label='New', command=do_nothing)            # creates a item, New in the sub menu that points to function do_nothing
 sub_menu.add_separator()                                          # add a seperator to the sub menu to seperate different groups within the File cascade
-sub_menu.add_command(label= 'Exit', command=menu1.quit)
+sub_menu.add_command(label='Exit', command=menu1.quit)
 
 # ******************************************************************** Edit Tab ***********************************************************************************
 edit_menu = Menu(menu1)

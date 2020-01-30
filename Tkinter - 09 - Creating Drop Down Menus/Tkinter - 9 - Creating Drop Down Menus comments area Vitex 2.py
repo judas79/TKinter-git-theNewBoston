@@ -4,18 +4,18 @@ root = Tk()
 
 class FullScreenApp(object):
     def _init_(self, master, **kwargs):
-        self.master=master
-        pad=3
-        self._geom='200x200+0+0'
+        self.master = master
+        pad = 3
+        self._geom = '200x200+0+0'
         master.geometry("{0}x{1}+0+0".format(
             master.winfo_screenwidth()-pad, master.winfo_screenheight()-pad))
-        master.bind('<Escape>',self.toggle_geom)
+        master.bind('<Escape>', self.toggle_geom)
 
-    def toggle_geom(self,event):
-        geom=self.master.winfo_geometry()
-        print(geom,self._geom)
+    def toggle_geom(self, event):
+        geom = self.master.winfo_geometry()
+        print(geom, self._geom)
         self.master.geometry(self._geom)
-        self._geom=geom
+        self._geom = geom
 
 def main():
     menu = Menu(root)
@@ -26,10 +26,10 @@ def main():
 
 # ******************** File Tab **************************
 
-    fileMenu = Menu(menu, tearoff=0) # Gets rid of the '----' in the menu
-    menu.add_cascade(label='File', menu=fileMenu) # Creates a new menu item
+    fileMenu = Menu(menu, tearoff=0)  # Gets rid of the '----' in the menu
+    menu.add_cascade(label='File', menu=fileMenu)  # Creates a new menu item
 
-    fileMenu.add_command(label='New File') # Created a new item in the fileMenu
+    fileMenu.add_command(label='New File')  # Created a new item in the fileMenu
     fileMenu.add_command(label='Open File...')
     fileMenu.add_command(label='Open Folder...')
 
@@ -47,7 +47,7 @@ def main():
     fileMenu.add_command(label='Save with Encoding')
     fileMenu.add_command(label='Save as...')
     fileMenu.add_command(label='Save All')
-    fileMenu.add_separator() # Puts in a clean line without any spacing, '----' without the spacing
+    fileMenu.add_separator()  # Puts in a clean line without any spacing, '----' without the spacing
 
     fileMenu.add_command(label='New Window')
     fileMenu.add_command(label='Open Window')
@@ -58,7 +58,7 @@ def main():
     fileMenu.add_separator()
     fileMenu.add_command(label='Exit', command=exit)
 
-    editMenu = Menu(menu, tearoff=0) # Same things
+    editMenu = Menu(menu, tearoff=0)  # Same things
     menu.add_cascade(label='Edit', menu=editMenu)
     editMenu.add_command(label='Undo')
     editMenu.add_command(label='Redo')

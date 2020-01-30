@@ -5,17 +5,17 @@ root = Tk()
 class FullScreenApp(object):
     def _init_(self, master, **kwargs):
         self.master=master
-        pad=3
-        self._geom='200x200+0+0'
+        pad = 3
+        self._geom = '200x200+0+0'
         master.geometry("{0}x{1}+0+0".format(
             master.winfo_screenwidth()-pad, master.winfo_screenheight()-pad))
-        master.bind('<Escape>',self.toggle_geom)
+        master.bind('<Escape>', self.toggle_geom)
 
-    def toggle_geom(self,event):
-        geom=self.master.winfo_geometry()
-        print(geom,self._geom)
+    def toggle_geom(self, event):
+        geom = self.master.winfo_geometry()
+        print(geom, self._geom)
         self.master.geometry(self._geom)
-        self._geom=geom
+        self._geom = geom
 
 def main():
     menu = Menu(root)
@@ -40,7 +40,7 @@ def main():
     subMenu.add_command(label='Save with Encoding')
     subMenu.add_command(label='Save as...')
     subMenu.add_command(label='Save All')
-    subMenu.add_separator() # Puts in a clean line without any spacing, '----' without the spacing
+    subMenu.add_separator()  # Puts in a clean line without any spacing, '----' without the spacing
 
     subMenu.add_command(label='New Window')
     subMenu.add_command(label='Open Window')
@@ -241,6 +241,6 @@ def main():
 main()
 
 root.title('Sublime Text 3')
-app=FullScreenApp()
+app = FullScreenApp()
 root.iconbitmap('stx.ico')
 root.mainloop()

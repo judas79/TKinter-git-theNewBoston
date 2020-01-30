@@ -1,5 +1,5 @@
-from Tkinter import *
-from  import askopenfilename
+from tkinter import *
+from tkinter.filedialog import askopenfilename
 
 
 def NewFile():
