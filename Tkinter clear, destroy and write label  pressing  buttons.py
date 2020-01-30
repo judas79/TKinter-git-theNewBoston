@@ -25,6 +25,10 @@ def destroy_widget(widget):
 
 if __name__ == '__main__':
     root = tk.Tk()
+    root.geometry('250x200')
+    root.configure(background='grey96')
+    root.title('Robot Rods')
+    root.iconbitmap('stx.ico')
     label = tk.Label(root, text="This will be cleared.")
 
     entry = tk.Entry(root)
